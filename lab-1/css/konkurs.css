@@ -1,0 +1,212 @@
+.form-card {
+  width: min(500px, 100%);
+  margin: 0 auto;
+
+  /* domyślnie jasny */
+  --card-bg: #ffffff;
+  --card-text: #111827;
+  --field-border: #d1d5db;
+  --input-bg: #ffffff;
+  --input-text: #111111;
+  --fieldset-border: #d1d5db;
+
+  background: var(--card-bg);
+  color: var(--card-text);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* przełącznik motywu */
+.theme-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Ikona motywu */
+.theme-label {
+  position: absolute;
+  right: 1rem;
+  top: 0.8rem;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  border-radius: 50%;
+  background: transparent;
+  z-index: 1;
+}
+
+.theme-label .icon-sun,
+.theme-label .icon-moon {
+  display: none;
+}
+.theme-label .icon-sun {
+  display: inline;
+}
+
+/* Pola */
+.contest-form .field {
+  display: grid;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.contest-form label {
+  font-weight: 600;
+  color: var(--card-text);
+}
+
+.contest-form input[type='text'],
+.contest-form input[type='email'],
+.contest-form input[type='date'],
+.contest-form input[type='number'],
+.contest-form input[list],
+.contest-form select,
+.contest-form input[type='color'] {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--field-border);
+  background: var(--input-bg);
+  color: var(--input-text);
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.contest-form input[type='color'] {
+  height: 2.4rem;
+  padding: 0;
+}
+
+/* Fieldset */
+.contest-form fieldset {
+  border: 1px solid var(--fieldset-border);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin: 0;
+}
+
+.contest-form legend {
+  font-weight: 600;
+  color: var(--card-text);
+  padding: 0 0.4rem;
+}
+
+/* Radio i checkbox */
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.choice input[type='radio'],
+.agree input[type='checkbox'] {
+  width: auto;
+  margin: 0;
+}
+
+.choice label,
+.agree label {
+  cursor: pointer;
+}
+
+.agree {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1.3rem;
+}
+
+.agree input[type='checkbox'] {
+  margin: 0;
+  width: auto;
+}
+
+.agree label {
+  margin: 0;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+/*zgłoszenie */
+.submit {
+  width: 100%;
+  background: #4caf50;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem;
+  cursor: pointer;
+  font-size: 16px;
+}
+.submit:hover {
+  background: #45a049;
+}
+
+/* ręczne przełączenie na ciemny*/
+.theme-toggle:checked + .form-card {
+  --card-bg: #1f2937;
+  --card-text: #f9fafb;
+  --field-border: #374151;
+  --input-bg: #111827;
+  --input-text: #f9fafb;
+  --fieldset-border: #374151;
+}
+
+.theme-toggle:checked + .form-card .theme-label .icon-sun {
+  display: none;
+}
+.theme-toggle:checked + .form-card .theme-label .icon-moon {
+  display: inline;
+}
+
+/* motyw dark */
+@media (prefers-color-scheme: dark) {
+  .form-card {
+    --card-bg: #1f2937;
+    --card-text: #f9fafb;
+    --field-border: #374151;
+    --input-bg: #111827;
+    --input-text: #f9fafb;
+    --fieldset-border: #374151;
+  }
+
+  /* pokazuj księżyc */
+  .theme-label .icon-sun {
+    display: none;
+  }
+  .theme-label .icon-moon {
+    display: inline;
+  }
+
+  /* ręczne na jasny */
+  .theme-toggle:checked + .form-card {
+    --card-bg: #ffffff;
+    --card-text: #111827;
+    --field-border: #d1d5db;
+    --input-bg: #ffffff;
+    --input-text: #111111;
+    --fieldset-border: #d1d5db;
+  }
+
+  .theme-toggle:checked + .form-card .theme-label .icon-sun {
+    display: inline;
+  }
+  .theme-toggle:checked + .form-card .theme-label .icon-moon {
+    display: none;
+  }
+}

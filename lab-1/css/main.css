@@ -1,0 +1,101 @@
+:root {
+  --bg: #f3f4f6;
+  --text: #111827;
+  --card: #ffffff;
+}
+
+/* pełna wysokość */
+html,
+body {
+  height: 100%;
+}
+
+/* globalne body */
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* layout */
+.container {
+  width: min(900px, 90%);
+  margin: 2rem auto;
+}
+
+.site-header {
+  width: min(900px, 90%);
+  margin: 2rem auto 1rem;
+}
+
+.site-header h1 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+}
+
+/* nawigacja */
+.site-nav a {
+  background: #e5e7eb;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #111827;
+  margin-right: 0.5rem;
+}
+
+.site-nav a:hover {
+  background: #d1d5db;
+}
+
+/* login uwagi */
+.card {
+  background: var(--card);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  width: min(500px, 100%);
+  margin: 0 auto;
+}
+
+/* wspólne pola */
+.field {
+  display: grid;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+/* przyciski */
+.btn.primary {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem;
+  font-weight: bold;
+}
+
+.btn.primary:hover {
+  background: #45a049;
+  cursor: pointer;
+}
+
+/* tło strony */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg) !important;
+}
+
+.site-header {
+  position: relative;
+  z-index: 3;
+}
+
+.form-card {
+  position: relative;
+  z-index: 1;
+}

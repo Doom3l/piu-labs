@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Zgłoszenie do Konkursu Plastycznego</title>
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/konkurs.css" />
   </head>
 
   <body>
@@ -31,8 +32,10 @@
           for="toggle-skin"
           title="Zmień motyw"
           aria-label="Zmień motyw"
-          >🌗</label
         >
+          <span class="icon-sun" aria-hidden="true">🌞</span>
+          <span class="icon-moon" aria-hidden="true">🌙</span>
+        </label>
 
         <form
           class="contest-form"
@@ -133,7 +136,6 @@
               />
               <label for="pub-yes">Tak</label>
             </div>
-
             <div class="choice">
               <input id="pub-no" type="radio" name="publikacja" value="nie" />
               <label for="pub-no">Nie</label>
