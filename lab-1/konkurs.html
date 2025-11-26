@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zgłoszenie do Konkursu Plastycznego</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <h1>Zgłoszenie<br />do Konkursu Plastycznego</h1>
+      <nav class="site-nav" aria-label="Nawigacja główna">
+        <a href="index.html">Start</a>
+        <a href="login.html">Logowanie</a>
+        <a href="uwagi.html">Uwagi</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <input
+        class="theme-toggle"
+        type="checkbox"
+        id="toggle-skin"
+        aria-label="Przełącz motyw"
+      />
+      <div class="form-card">
+        <label
+          class="theme-label"
+          for="toggle-skin"
+          title="Zmień motyw"
+          aria-label="Zmień motyw"
+          >🌗</label
+        >
+
+        <form
+          class="contest-form"
+          action="https://httpbin.org/get"
+          method="get"
+          novalidate
+        >
+          <div class="field">
+            <label for="fname">Imię:</label>
+            <input id="fname" name="imie" type="text" required maxlength="30" />
+          </div>
+
+          <div class="field">
+            <label for="lname">Nazwisko:</label>
+            <input
+              id="lname"
+              name="nazwisko"
+              type="text"
+              required
+              maxlength="50"
+            />
+          </div>
+
+          <div class="field">
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+
+          <div class="field">
+            <label for="city">Miasto:</label>
+            <input
+              id="city"
+              name="miasto"
+              list="cities"
+              placeholder="Wpisz lub wybierz"
+              required
+            />
+            <datalist id="cities">
+              <option value="Warszawa"></option>
+              <option value="Kraków"></option>
+              <option value="Gdańsk"></option>
+              <option value="Poznań"></option>
+              <option value="Wrocław"></option>
+            </datalist>
+          </div>
+
+          <div class="field">
+            <label for="bday">Data urodzenia:</label>
+            <input id="bday" name="data_urodzenia" type="date" required />
+          </div>
+
+          <div class="field">
+            <label for="count">Liczba zgłaszanych prac (od 1 do 6):</label>
+            <input
+              id="count"
+              name="liczba_prac"
+              type="number"
+              inputmode="numeric"
+              min="1"
+              max="6"
+              step="1"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="color">Kolor wiodący prac:</label>
+            <input
+              id="color"
+              name="kolor"
+              type="color"
+              value="#ffd400"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="category">Kategoria pracy:</label>
+            <select id="category" name="kategoria" required>
+              <option value="" selected disabled>
+                -- wybierz kategorię --
+              </option>
+              <option>Rysunek</option>
+              <option>Malarstwo</option>
+              <option>Grafika cyfrowa</option>
+            </select>
+          </div>
+
+          <fieldset class="field group" aria-labelledby="publegend">
+            <legend id="publegend">Publikacja pracy online:</legend>
+            <div class="choice">
+              <input
+                id="pub-yes"
+                type="radio"
+                name="publikacja"
+                value="tak"
+                required
+              />
+              <label for="pub-yes">Tak</label>
+            </div>
+
+            <div class="choice">
+              <input id="pub-no" type="radio" name="publikacja" value="nie" />
+              <label for="pub-no">Nie</label>
+            </div>
+          </fieldset>
+
+          <div class="agree">
+            <input type="checkbox" id="zgoda" required />
+            <label for="zgoda">Zgadzam się na regulamin konkursu</label>
+          </div>
+
+          <button class="btn primary submit" type="submit">
+            Wyślij zgłoszenie
+          </button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
