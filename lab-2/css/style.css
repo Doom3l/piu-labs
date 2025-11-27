@@ -1,19 +1,65 @@
-/* Minimalny reset  */
 html {
-  font-size: 16px; /* bazowy rozmiar czcionki */
-  font-family: system-ui, sans-serif; /* font systemowy */
-  line-height: 1.5; /* lepsza czytelność */
+  font-size: 16px;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
 }
+
 body {
   margin: 1rem;
   padding: 0;
 }
 
 a {
-  color: #0066cc; /* niebieski kolor linków */
-  text-decoration: none; /* bez podkreślenia */
+  color: #0066cc;
+  text-decoration: none;
   font-size: 1.4rem;
 }
+
 a:hover {
-  text-decoration: underline; /* podkreślenie przy najechaniu */
+  text-decoration: underline;
+}
+
+body {
+  background: #f0f2f5;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  max-width: 480px;
+  width: 90%;
+
+  margin: 12vh auto 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: #222;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.6rem 1rem;
+  background: #e7effc;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: #004c99;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.main-nav a:hover {
+  background: #d4e4fb;
+  text-decoration: none;
+  transform: translateY(-2px);
 }
