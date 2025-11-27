@@ -1,0 +1,200 @@
+:root {
+  --primary: #1e6dfb;
+  --border: #1e6dfb;
+  --img: url('../img/polo_b.png');
+  --btn-bg: #1e6dfb;
+  --btn-bg-h: #0e55d3;
+}
+
+/* kolory polówek */
+
+#red:checked~.product {
+  --primary: #d93c3c;
+  --border: #d93c3c;
+  --img: url('../img/polo_r.png');
+  --btn-bg: #d93c3c;
+  --btn-bg-h: #b72c2c;
+}
+
+#green:checked~.product {
+  --primary: #0f8a3b;
+  --border: #0f8a3b;
+  --img: url('../img/polo_g.png');
+  --btn-bg: #0f8a3b;
+  --btn-bg-h: #0c6d30;
+}
+
+#yellow:checked~.product {
+  --primary: #e3b218;
+  --border: #e3b218;
+  --img: url('../img/polo_y.png');
+  --btn-bg: #e3b218;
+  --btn-bg-h: #c99b12;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #212121;
+  padding: 30px;
+}
+
+.product-card {
+  display: flex;
+  justify-content: center;
+}
+
+.product {
+  background: #eee;
+  padding: 20px;
+  border-radius: 12px;
+  width: min(100%, 850px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.image-box {
+  border: 3px solid var(--border);
+  padding: 10px;
+  border-radius: 8px;
+  width: min(100%, 500px);
+}
+
+.product-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-image: var(--img);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.info {
+  width: min(100%, 300px);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* nagłówek */
+
+h2 {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.promo {
+  background: var(--primary);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.info p {
+  margin-bottom: 30px;
+}
+
+/* Kolor */
+
+.info h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.color-pick {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+/* kuleczki kolorów */
+.color-ball {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #444;
+  cursor: pointer;
+}
+
+.color-ball:hover {
+  transform: scale(1.2);
+}
+
+.ball-blue {
+  background: #1e6dfb;
+}
+
+.ball-red {
+  background: #d93c3c;
+}
+
+.ball-green {
+  background: #0f8a3b;
+}
+
+.ball-yellow {
+  background: #e3b218;
+}
+
+/* rozmiary */
+
+.size-pick {
+  margin-bottom: 30px;
+}
+
+.size-pick input {
+  display: none;
+}
+
+.size-pick label {
+  padding: 6px 14px;
+  border: 2px solid #666;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 5px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.size-pick input:checked+label {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Cena */
+
+.price {
+  margin-bottom: 35px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Przycisk */
+
+.buy-btn {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 18px 0;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 12px;
+  background: var(--btn-bg);
+}

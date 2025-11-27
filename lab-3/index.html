@@ -2,11 +2,57 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <title>Lab 3</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Koszulka Polo</title>
+    <link rel="stylesheet" href="css/polo.css" />
   </head>
   <body>
-    <h1>Lab 3</h1>
-    <a href="..">Powrót</a>
+    <div class="product-card">
+      <input type="radio" name="color" id="blue" checked />
+      <input type="radio" name="color" id="red" />
+      <input type="radio" name="color" id="green" />
+      <input type="radio" name="color" id="yellow" />
+
+      <div class="product">
+        <div class="image-box">
+          <div class="product-img"></div>
+        </div>
+
+        <div class="info">
+          <h2>Koszulka Polo <span class="promo">Promocja!</span></h2>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+            quis adipisci maiores.
+          </p>
+
+          <h3>Kolor</h3>
+          <div class="color-pick">
+            <label for="blue" class="color-ball ball-blue"></label>
+            <label for="red" class="color-ball ball-red"></label>
+            <label for="green" class="color-ball ball-green"></label>
+            <label for="yellow" class="color-ball ball-yellow"></label>
+          </div>
+
+          <h3>Rozmiar</h3>
+          <div class="size-pick">
+            <input type="radio" id="s" name="size" />
+            <label for="s">S</label>
+
+            <input type="radio" id="m" name="size" checked />
+            <label for="m">M</label>
+
+            <input type="radio" id="l" name="size" />
+            <label for="l">L</label>
+
+            <input type="radio" id="xl" name="size" />
+            <label for="xl">XL</label>
+          </div>
+
+          <div class="price">59,99 zł</div>
+
+          <button class="buy-btn">🛒 Do koszyka</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
