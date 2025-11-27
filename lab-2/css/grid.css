@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #222;
+}
+
+main h1,
+main h2,
+main h3,
+main p,
+aside h1,
+aside h2,
+aside h3,
+aside p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* MOBILE - UKŁAD */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'header'
+        'nav'
+        'main'
+        'aside'
+        'footer';
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+header,
+nav,
+main,
+aside,
+footer {
+    padding-inline: 1rem;
+}
+
+/* HEADER */
+
+header {
+    grid-area: header;
+    background: #f5a623;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 0.75rem;
+}
+
+header .logo {
+    background: #ffd34a;
+    padding: 0.35rem 1rem;
+    border-radius: 4px;
+    font-size: 1.4rem;
+}
+
+nav {
+    grid-area: nav;
+    background: #005f9e;
+    padding-block: 0.6rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.8rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* MOBILE */
+
+main {
+    grid-area: main;
+    padding-block: 2rem 1.5rem;
+}
+
+aside {
+    grid-area: aside;
+    background: #d9f4dd;
+    padding-block: 1.5rem 2rem;
+}
+
+aside>div {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 2.4rem;
+}
+
+/* FOOTER */
+
+footer {
+    grid-area: footer;
+    background: #01a85e;
+    /* mocna zieleń */
+    color: #ffffff;
+    text-align: center;
+    padding-block: 0.9rem;
+    font-size: 0.9rem;
+}
+
+/* SZEROKA */
+
+@media (min-width: 1024px) {
+    body {
+        padding-block: 1.5rem;
+    }
+
+    .container {
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+            'header header'
+            'nav nav'
+            'main aside'
+            'footer footer';
+    }
+
+    header,
+    nav,
+    main,
+    aside,
+    footer {
+        padding-inline: 2rem;
+    }
+
+    main {
+        padding-block: 2rem;
+    }
+
+    aside {
+        padding-block: 2rem;
+    }
+
+    /* SIDEBAR - IKONY */
+    aside>div {
+        justify-content: flex-start;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 2rem;
+        row-gap: 1.2rem;
+    }
+}
