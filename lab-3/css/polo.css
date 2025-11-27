@@ -6,7 +6,7 @@
   --btn-bg-h: #0e55d3;
 }
 
-/* kolory polówek */
+/* POLO - KOLOR */
 
 #red:checked~.product {
   --primary: #d93c3c;
@@ -53,6 +53,13 @@ body {
   justify-content: center;
   align-items: stretch;
   gap: 20px;
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
 }
 
 .image-box {
@@ -60,6 +67,8 @@ body {
   padding: 10px;
   border-radius: 8px;
   width: min(100%, 500px);
+
+  transition: border-color 0.4s ease;
 }
 
 .product-img {
@@ -69,6 +78,12 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
+  transition: transform 0.4s ease;
+}
+
+.product:hover .product-img {
+  transform: scale(1.03);
 }
 
 .info {
@@ -81,7 +96,7 @@ body {
   height: 100%;
 }
 
-/* nagłówek */
+/* HEADER */
 
 h2 {
   margin-top: 0;
@@ -97,13 +112,15 @@ h2 {
   padding: 2px 8px;
   border-radius: 6px;
   font-size: 0.8rem;
+
+  transition: background 0.4s ease;
 }
 
 .info p {
   margin-bottom: 30px;
 }
 
-/* Kolor */
+/* KOLOR */
 
 .info h3 {
   margin-top: 30px;
@@ -117,16 +134,19 @@ h2 {
   margin-bottom: 30px;
 }
 
-/* kuleczki kolorów */
+/* KOLOR - WYBÓR */
 .color-ball {
   width: 22px;
   height: 22px;
   border-radius: 50%;
   border: 2px solid #444;
   cursor: pointer;
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .color-ball:hover {
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25);
   transform: scale(1.2);
 }
 
@@ -146,7 +166,7 @@ h2 {
   background: #e3b218;
 }
 
-/* rozmiary */
+/* ROZMIAR */
 
 .size-pick {
   margin-bottom: 30px;
@@ -166,15 +186,27 @@ h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.size-pick label:hover {
+  transform: translateY(-2px);
 }
 
 .size-pick input:checked+label {
   background: var(--primary);
   color: white;
   border-color: var(--primary);
+  transform: scale(1.18) translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
 }
 
-/* Cena */
+/* CENA */
 
 .price {
   margin-bottom: 35px;
@@ -183,7 +215,7 @@ h2 {
   text-align: center;
 }
 
-/* Przycisk */
+/* PRZYCISK */
 
 .buy-btn {
   width: 75%;
@@ -197,4 +229,11 @@ h2 {
   font-weight: 600;
   border-radius: 12px;
   background: var(--btn-bg);
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.buy-btn:hover {
+  background: var(--btn-bg-h);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
 }
