@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Lab 4</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <h1>Lab 4</h1>
-    <a href="..">Powrót</a>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Kanban</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="board">
+    <div class="column" data-column="todo">
+      <h2>Do zrobienia</h2>
+      <button class="add-card">Dodaj kartę</button>
+      <div class="cards"></div>
+      <div class="controls">
+        <button class="color-column">Koloruj kolumnę</button>
+        <span class="count">0</span>
+      </div>
+    </div>
+    <div class="column" data-column="inprogress">
+      <h2>W trakcie</h2>
+      <button class="add-card">Dodaj kartę</button>
+      <div class="cards"></div>
+      <div class="controls">
+        <button class="color-column">Koloruj kolumnę</button>
+        <span class="count">0</span>
+      </div>
+    </div>
+    <div class="column" data-column="done">
+      <h2>Zrobione</h2>
+      <button class="add-card">Dodaj kartę</button>
+      <div class="cards"></div>
+      <div class="controls">
+        <button class="color-column">Koloruj kolumnę</button>
+        <span class="count">0</span>
+      </div>
+    </div>
+  </div>
+  <script src="app.js" defer></script>
+</body>
 </html>
